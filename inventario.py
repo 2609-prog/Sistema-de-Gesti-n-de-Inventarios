@@ -39,7 +39,7 @@ class Inventario:
     def __init__(self):
         self.productos = []
 
-    def añadir_producto(self, producto): 
+    def añadir_producto(self, producto): # Agrega un numevo producto (Validando que el ID sea único)
         for p in self.productos:
             if p.get_id() == producto.get_id():
                 print(" Error: El ID ya existe. No se puede añadir el producto.")
@@ -47,7 +47,7 @@ class Inventario:
         self.productos.append(producto)
         print("Producto añadido correctamente.")
 
-    def eliminar_producto(self, id_producto):
+    def eliminar_producto(self, id_producto): # Elimina el producto por medio de ID
         for p in self.productos:
             if p.get_id() == id_producto:
                 self.productos.remove(p)   # corregido
@@ -55,7 +55,7 @@ class Inventario:
                 return
         print(" No se encontró un producto con ese ID.")
 
-    def actualizar_producto(self, id_producto, cantidad=None, precio=None):
+    def actualizar_producto(self, id_producto, cantidad=None, precio=None): # modifica la cantidad y/o precio de un product0
         for p in self.productos:
             if p.get_id() == id_producto:
                 if cantidad is not None:
@@ -66,7 +66,7 @@ class Inventario:
                 return
         print(" No se encontró un producto con ese ID.")
 
-    def buscar_por_nombre(self, nombre):
+    def buscar_por_nombre(self, nombre): # Permite buscar los productos por coincidencias en el nombre
         resultados = [p for p in self.productos if nombre.lower() in p.get_nombre().lower()]  
         if resultados:
             print(" Resultados de búsqueda:")
@@ -75,7 +75,7 @@ class Inventario:
         else:
             print(" No se encontraron productos con ese nombre.")
 
-    def mostrar_todos(self):
+    def mostrar_todos(self): # Muestra todo el inventario 
         if self.productos:
             print("Inventario completo:")
             for p in self.productos:
