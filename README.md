@@ -16,3 +16,8 @@ Estructura
 Clase Producto: define ID, nombre, cantidad y precio.
 
 Clase Inventario: administra la lista de productos y sus operaciones.
+
+<img width="1365" height="719" alt="image" src="https://github.com/user-attachments/assets/ebeca16a-8d4f-4498-8164-31e84bafd48b" />
+
+
+
